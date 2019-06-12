@@ -10,5 +10,6 @@ services:
                         - $bash_path\mybash\.ssh:/root/.ssh
                         - $bash_path\mybash\bash\.bash_history:/root/.bash_history
                         - $bash_path\mybash\vim\vimrc:/etc/vim/vimrc
+                        - C:\Windows\System32\drivers\etc\hosts:/etc/hosts
                         - c:/:/mnt/c
                 network_mode: host
