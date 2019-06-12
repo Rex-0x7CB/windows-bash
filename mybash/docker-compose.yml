@@ -1,0 +1,14 @@
+version: "3.0"
+services:
+        service_mybash:
+                build: .
+                stdin_open: true
+                tty: true
+                image: mybash
+                working_dir: $present_working_dir
+                volumes:
+                        - $bash_path\mybash\.ssh:/root/.ssh
+                        - $bash_path\mybash\bash\.bash_history:/root/.bash_history
+                        - $bash_path\mybash\vim\vimrc:/etc/vim/vimrc
+                        - c:/:/mnt/c
+                network_mode: host
